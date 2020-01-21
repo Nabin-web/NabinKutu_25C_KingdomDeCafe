@@ -1,0 +1,202 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{% static 'hotelapp.css' %}">
+    <link rel="stylesheet" type="text/css" href="F:\Assignment_2nd_year\ModernWeb\fontawesome-free-5.12.0-web\css\all.css">
+    <title>Hello, world!</title>
+    <style type="text/css">
+
+
+
+    </style>
+  </head>
+  <body>
+
+
+  <div class="container-fluid" >
+      <div class="row" id="navi">
+          
+          <div class="col-lg-2 col-md-2 col-sm-2 logo">
+              <img src="{% static 'images/logo.jpg' %}" alt="company logo image">
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-sm-8">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="whole">
+            <a class="navbar-brand" href="../">KDC</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/home">Home</a>
+                </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="/food">FoodGallery</a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link text-white font-italic" href="/menu">Menu</a>
+            </li>
+
+
+              
+      
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Options
+                </a>
+                <div class="dropdown-menu " aria-labelledby="navbarDropdown" id="drop">
+                  <a class="dropdown-item" href="/location">Location</a>
+                  <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/chef">Chef's</a>
+                  </div>
+              </li>
+      
+              
+            </ul>
+
+
+    
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            
+            
+          </div>
+           
+           
+          </nav>
+
+      
+      </div>
+      
+
+      <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
+              <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
+              or
+              <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
+      </div>
+
+
+    </div>
+
+
+
+  
+    
+  <div class="container-fluid">
+      <div class="row" id="contain">
+          <div class="col-lg-6 col-md-6 col-sm-6 intro">
+              <p><h1>The Best Online site to Book your Place on Restaurent and Cafe....</h1></p>
+              <h4>Let's go everywhere with technology</h4>
+              <button type="button" class="btn btn-success" id="download">Free Download</button>
+              
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner" id="carouselheight">
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'images/cup.jpg' %}" alt="Cafe cup">
+                </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/tshirt.jpg' %}" alt="Company tshirt">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/mobile.jpg' %}" alt="mobile app">
+              </div>
+
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/welcome.jpg' %}" alt="Welcome note">
+              </div>
+
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/baggage.jpg' %}" alt="baggage">
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="page-header text-capitalize text-center" id="Simple">
+      <h2> Simple to learn and use.</h2>
+      <p>Start your free Cafe eCommerce Store now!</p>
+   
+ </div>
+
+<br/>
+
+ <div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="col-lg-10 col-md-1 col-sm-10 companyimg">
+      <div id="local"><p>Local business Supporter</p></div>
+      <div id="organization"> <p>Kingdom De cafe is being Supported by different organizations.</p></div>
+      <img src="{% static 'images/fast.jpg' %}">
+      <img src="{% static 'images/Softwarica.jpg' %}">
+       <img src="{% static 'images/gogreen.jpg' %}">
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1">a</div>
+   
+ </div>
+
+
+
+ 
+  
+
+ <div class="row" id="business">
+  
+    
+  
+    
+    <div class="col-lg-3 col-md-3 col-sm-3" >
+    </div>
+
+
+
+    <div class="col-lg-5 col-md-5 col-sm-5" id="Copyright">
+      <p>Copyright 2019-2025 Kingdom De Cafe &copy; - All right reserved. &vert; privacy policy</p>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-3" >
+    </div>
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+ 

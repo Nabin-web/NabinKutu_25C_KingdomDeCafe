@@ -1,0 +1,90 @@
+ #welcomepages
+      {
+        background-image: url(images/bg.jpg);
+        height: 625px;
+        background-repeat: no-repeat;
+      }
+
+
+
+      #show
+      {
+        text-align:center;
+        color: white;
+        background: black;
+        font-family:Garamond;
+        font-size: 30px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-decoration: underline;
+        margin: 200px 0px 0px 0px;
+
+      }
+
+      #wel
+      {
+        text-align:center;
+        color: white;
+        font-family:Brush Script MT;
+        font-size: 50px;
+        font-weight: bolder;
+        text-transform: uppercase;
+
+      }
+
+      #business
+        {
+          background:green;
+          height: 300px;
+          color: white;
+        }
+
+        #reserve
+        {
+          margin: 0px 0px 0px 650px;
+          font-family: Garamond;
+          font-weight: bolder;
+        }
+
+        .edit
+        {
+          color:white;
+        }
+
+        #visit
+        {
+          margin: 50px 0px 0px 650px;
+          font-family: Garamond;
+          font-weight: bolder;
+          padding: 5px 55px;
+
+        }
+
+        #forfood
+        {
+           background-image: url(images/forfood.jpg);
+           height: 200px;
+        }
+
+
+        #logo img
+        {
+          height: 100px;
+        }
+
+
+        #table img
+        {
+          height: 200px;
+          width: 80%;
+          border-radius: 10%;
+        }
+
+        #Book
+        {
+          margin-left: 20px;
+        }
+
+
+
+

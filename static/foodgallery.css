@@ -1,0 +1,29 @@
+#welcomepages
+      {
+        background-image: url(images/forfood.jpg);
+        height: 800px;
+        background-repeat: no-repeat;
+
+      }
+
+      #carouselheight
+      {
+        height :350px;
+      }
+
+      #carouselheight img
+      {
+        height :350px;
+      }
+
+      #item
+      {
+        color:white;
+        text-align: center;
+
+      }
+
+      a:hover
+      {
+        color: red;
+      }

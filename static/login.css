@@ -1,0 +1,88 @@
+#welcomepages
+      {
+        background-image: url(images/forfood.jpg);
+        height: 725px;
+        background-repeat: no-repeat;
+
+      }
+
+      #navlogin a
+      {
+        color:black;
+      }
+
+
+      #login
+      {
+        margin: 50px 0px 0px 0px;
+      }
+
+
+      #business
+        {
+          background:green;
+          height: 300px;
+          color: white;
+        }
+
+      form
+      {
+          border: 3px solid #f1f1f1;
+      }
+
+      #avatar
+      {
+        width: 30%;
+        border-radius: 50%;
+        margin-left: 250px;
+      }
+
+      input[type=text], input[type=password]
+      {
+        margin: 5px 10px 5px 10px;
+        width: 95%;
+      }
+
+
+      label
+      {
+        color: white;
+        font-family: cursive;
+        font-style: oblique;
+        margin: 5px;
+      }
+
+      #loginbtn
+      {
+        padding: 0px 50px 0px 50px;
+        margin-left: 300px;
+        padding: 5px 20px;
+      }
+
+      .signbtn
+      {
+
+        color: white;
+        padding:5px 10px;
+
+      }
+
+      #sign button
+      {
+        margin: 5px 5px;
+
+      }
+
+      #sign
+      {
+        margin: 0px 0px 0px 0px;
+        background-color:transparent;
+        color:white;
+      }
+
+      .psw
+      {
+
+        color: white;
+
+      }

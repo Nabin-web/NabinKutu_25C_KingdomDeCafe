@@ -1,0 +1,132 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+    <title>Hello, world!</title>
+    <style type="text/css">
+
+
+    </style>
+  </head>
+  <body>
+
+
+    
+    <div class="container-fluid">
+      <div class="row" id="welcomepages">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <img src="{% static 'images/logo.jpg' %}">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xl" id="login">
+            <form action="action_page.php" method="post">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <div class="imgcontainer">
+                  <img src="{% static 'images/loginimg.png' %}" alt="Avatar" id="avatar">
+                </div>
+                </div>
+
+              </div>
+
+
+          
+
+                  <div class="form-group"> 
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" class="form-control " size="35" required>
+                 
+
+                  <div class="form-group"> 
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" class="form-control" required>
+                  </div>
+
+                  <div class="form-group"> 
+                    <a href="foodgallery.html"><button type="button" class="btn btn-primary" id="loginbtn">Login</button></a>
+                  </div>
+
+                  <div class="form-group"> 
+                    <label>
+                      <input type="checkbox"  name="remember"> Remember me
+                    </label>
+                  </div>
+                </div>
+
+                <div class="container" style="" id="sign">
+                  I don't have account <a href="/register">Sign Up</button></a>
+                  <div class="form-group">
+                    <span class="psw">Forgot <a href="#">password?</a></span>  
+                  </div>
+                  
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          
+        </div>
+      </div>
+      
+
+  <!--   <div class="row" id="business">
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        <div class="col-lg-10 col-md-1 col-sm-10" id="Copyright">
+        <p>Copyright 2019-2025 Kingdom De Cafe &copy; - All right reserved. | privacy policy</p>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+   
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

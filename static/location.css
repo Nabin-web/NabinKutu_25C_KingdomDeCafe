@@ -1,0 +1,28 @@
+ #welcomepages
+      {
+        background-image: url(images/forfood.jpg);
+        height: 800px;
+        background-repeat: no-repeat;
+
+      }
+
+      #map img
+      {
+        margin-top: 100px;
+        height: 500px;
+      }
+
+      #des
+      {
+        margin-top: 100px;
+        color: white;
+      }
+
+
+    #Copy
+     {
+        color:white;
+        text-align: center;
+        padding: 0px 0px 0px 20px;
+        margin:  20px 0px 0px 0px;
+     }

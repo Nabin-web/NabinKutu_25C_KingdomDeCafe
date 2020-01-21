@@ -1,0 +1,147 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'registration.css' %}">
+    <title>Hello, world!</title>
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+      <div class="row" id="welcomee">
+        <div class="col-lg-6 col-md-6 col-sm-6 " id="paragraph">
+          <p>Sign Up &rarr;</p>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xl" id="login">
+            <form action="action_page.php" method="post">
+
+
+                <div class="row">
+
+                  <div class="col-lg-3 col-sm-3 col-md-3"></div>
+
+                   
+                  
+                </div>
+                
+                <div class="row">
+
+                  <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="imgcontainer">
+                        <img src="{% static 'images/logo.jpg' %}" alt="Avatar" id="avatar">
+                      </div>
+                  </div>
+                 
+
+                  <div class="col-lg-6 col-sm-6 col-md-">
+                     <div class="imgcontainer">
+                        <img src="{% static 'images/registrationimg.jpg' %}" alt="Avatar" id="avatarr">
+                      </div>
+                  </div>
+                  
+                </div>
+               
+
+          
+
+                  <div class="form-group"> 
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="Enter First name.." name="fname" class="form-control "  required>
+                  </div>
+                    
+
+                   <div class="form-group"> 
+                    <label for="fname"><b>Second Name</b></label>
+                    <input type="text" placeholder="Enter last name.." name="fname" class="form-control "  required>
+                  </div>
+
+                   <div class="form-group"> 
+                    <label for="fname"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email.." name="fname" class="form-control "  required>
+                  </div>
+                    
+                     <div class="form-group"> 
+                    <label for="fname"><b>Password</b></label>
+                    <input type="text" placeholder="Enter Password.." name="fname" class="form-control "  required>
+                  </div>
+
+                    
+                  <div class="form-group"> 
+                    <label for="Phone"><b>Phone number</b></label>
+                    <input type="text" placeholder="Enter your Number" name="phonenumber" class="form-control" required>
+                 </div>
+
+                <div class="form-group">
+                    <label for="Dateofbirth"><b>Date-of-Birth</b></label>
+                    <input type="date" placeholder="Enter your dob" name="dob" class="form-control" required>
+                 </div>
+
+                 <div class="form-group"> 
+                    <input type="checkbox"> Remember Me
+                 </div>
+
+
+                 <div class="form-group"> 
+                    <p>I Already have account. <a href="login.html">Login</a></p>
+                 </div>
+
+                  
+
+                  
+
+                  <div class="form-group"> 
+                    <button type="button" class="btn btn-success signbtn">SignIn</button>
+                    
+                  </div>
+
+                
+
+              
+            </form>
+
+        </div>
+      </div>
+      
+
+  <!--   <div class="row" id="business">
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        <div class="col-lg-10 col-md-1 col-sm-10" id="Copyright">
+        <p>Copyright 2019-2025 Kingdom De Cafe &copy; - All right reserved. | privacy policy</p>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+
+    </div> -->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
