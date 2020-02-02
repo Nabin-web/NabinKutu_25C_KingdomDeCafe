@@ -20,7 +20,7 @@
     
     <div class="container-fluid" id="welcomepages">
         <div class="row">
-             <div class="col-lg-6 col-sm-6 col-md-6">
+             <div class="col-lg-7 col-sm-7 col-md-7">
                     <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="hov">
                     <a class="navbar-brand text-white font-weight-bold" href="../">KDC</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -38,7 +38,11 @@
                     </li>
 
                     <li class="nav-item active">
-                      <a class="nav-link text-white font-italic" href="/menu">Menu</a>
+                      <a class="nav-link text-white font-italic" href="../menu">Menu</a>
+                  </li>
+
+                        <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="/review">Review</a>
                   </li>
       
                     <li class="nav-item dropdown">
@@ -67,6 +71,19 @@
               </nav>
                   
             </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
+
+                    {% if logged != '' %}
+                    {{request.usr.Email}}
+                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+
+                    {% else %}
+                    <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
+
+                    <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
+                    {% endif %}
+                </div>
           
 
           

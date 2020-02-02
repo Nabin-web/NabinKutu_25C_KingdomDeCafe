@@ -1,0 +1,70 @@
+ #welcomepages
+      {
+        background-image: url(images/forfood.jpg);
+        height: 600px;
+        background-repeat: no-repeat;
+
+      }
+
+      #carouselheight
+      {
+        height :550px;
+
+
+      }
+
+      #carouselheight img
+      {
+        height :550px;
+
+      }
+
+      #menuimg img
+      {
+        border-radius: 50%;
+        height: 100px;
+      }
+
+      hr
+      {
+        height: 40px;
+        display: block;
+        width: 1000px;
+      }
+
+      h3
+      {
+        font-weight: bolder;
+        margin: 0px 0px 0px 5px;
+      }
+
+      #menuimg p
+      {
+        font-family: cursive;
+        margin: 0px 0px 0px 10px;
+      }
+
+      #menuimg span
+      {
+        font-family: cursive;
+        margin: 0px 0px 0px 50px;
+      }
+
+      #menuimg button
+      {
+
+        margin: 0px 0px 0px 50px;
+      }
+
+
+        fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove (internal value);
+}
+

@@ -26,12 +26,12 @@
 
             <div class="row" >
                 <div class="col-lg-3 col-sm-3 col-md-3" id="logo">
-                    <img src="{% static 'images/logo.jpg' %}">
+                    <img src="{% static 'images/logo.jpg' %}" id="image" onload="myFunction();">
                 </div>
 
 
 
-                <div class="col-lg-6 col-sm-6 col-md-6" >
+                <div class="col-lg-7 col-sm-7 col-md-7" >
                     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                     <a class="navbar-brand text-white" href="../">KDC</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -49,7 +49,11 @@
                     </li>
 
                     <li class="nav-item active">
-                      <a class="nav-link text-white font-italic" href="/menu">Menu</a>
+                      <a class="nav-link text-white font-italic" href="/menu/">Menu</a>
+                  </li>
+
+                        <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="/review">Review</a>
                   </li>
 
                     <li class="nav-item dropdown">
@@ -79,9 +83,16 @@
 
             </div>
                 <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
+
+                    {% if logged != '' %}
+                    {{request.logged.Email}}
+                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+
+                    {% else %}
                     <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
-                        or
+
                     <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
+                    {% endif %}
                 </div>
           </div>
         </div>
@@ -111,7 +122,6 @@
                 &larr; Reserver Your Table &rarr;
               </button>
 
-
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -123,7 +133,8 @@
                     </div>
 
                     <div class="modal-body" id="Book">
-                      <div class="row" id="table">
+                      <div class="row" id="table"><form method="post">
+                          {% csrf_token %}
                         <div class="form-group">
                           <img src="{% static 'images/tables.jpg' %}">
                         </div>
@@ -149,6 +160,11 @@
                           <input type="number" name="customernum" placeholder="Enter number of customer.." class="form-control" required>
                         </div>
 
+                          <div class="form-group">
+                          <label>Time to arrive</label>
+                          <input type="text" name="time" placeholder="Enter time to arrive.." class="form-control" required>
+                        </div>
+
                         <div class="form-group">
                           <label>Date</label>
                           <input type="Date" name="date" placeholder="Enter table number.." class="form-control" required>
@@ -159,8 +175,10 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Book now!</button>
+                      <button type="submit" class="btn btn-primary">Book now!</button>
                     </div>
+
+                      </form>
                   </div>
                 </div>
               </div>
@@ -223,7 +241,14 @@
 
 
 
-
+    <script>
+        function myFunction()
+        {
+        var img = document.getElementById('image');
+        img.setAttribute('style', 'transform: rotate(360deg)');
+        setTimeout("myFunction()",1000);
+        }
+    </script>
 
 
 

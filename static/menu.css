@@ -38,20 +38,8 @@
         margin: 0px 0px 0px 5px;
       }
 
-      #menuimg p
+      #card img
       {
-        font-family: cursive;
-        margin: 0px 0px 0px 10px;
-      }
-
-      #menuimg span
-      {
-        font-family: cursive;
-        margin: 0px 0px 0px 50px;
-      }
-
-      #menuimg button
-      {
-
-        margin: 0px 0px 0px 50px;
+        height: 100px;
+        border-radius: 30%;
       }

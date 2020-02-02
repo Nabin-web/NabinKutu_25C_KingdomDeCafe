@@ -1,0 +1,123 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" type="text/css" href="{% static 'review.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style type="text/css">
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container-fluid" id="welcomepages">
+        <div class="row">
+             <div class="col-lg-7 col-sm-7 col-md-7">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="hov">
+                    <a class="navbar-brand text-white font-weight-bold" href="../">KDC</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                      <a class="nav-link text-white  font-italic" href="/home">Home</a>
+                    </li>
+
+                    <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="/food">FoodGallery</a>
+                    </li>
+
+                    <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="/menu">Menu</a>
+                    </li>
+
+                        <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="/review">Review</a>
+                  </li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle text-white font-weight-bold font-italic" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Options
+                      </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item  font-italic" href="/location">Location</a>
+
+                      <div class="dropdown-divider"></div>
+                        <a class="dropdown-item   font-italic" href="/chef">Chef's</a>
+                      </div>
+                    </li>
+
+
+                  </ul>
+
+
+
+
+
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
+
+                    {% if logged != '' %}
+                    {{request.usr.Email}}
+                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+
+                    {% else %}
+                    <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
+
+                    <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
+                    {% endif %}
+            </div>
+
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="..." class="rounded float-left" alt="...">
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

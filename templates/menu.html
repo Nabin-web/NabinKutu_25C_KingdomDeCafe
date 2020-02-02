@@ -21,7 +21,7 @@
     
     <div class="container-fluid" id="welcomepages">
         <div class="row">
-             <div class="col-lg-6 col-sm-6 col-md-6">
+             <div class="col-lg-7 col-sm-7 col-md-7">
                     <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="hov">
                     <a class="navbar-brand text-white font-weight-bold" href="../">KDC</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -39,8 +39,14 @@
                     </li>
 
                     <li class="nav-item active">
-                      <a class="nav-link text-white font-italic" href="/menu">Menu</a>
+                      <a class="nav-link text-white font-italic" href="../menu">Menu</a>
                     </li>
+
+                        <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="/review">Review</a>
+                  </li>
+
+
       
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle text-white font-weight-bold font-italic" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -70,6 +76,18 @@
               </nav>
                   
             </div>
+            <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
+
+                    {% if logged != '' %}
+                    {{request.usr.Email}}
+                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+
+                    {% else %}
+                    <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
+
+                    <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
+                    {% endif %}
+                </div>
           
 
           
@@ -133,348 +151,30 @@
                 </div>
             </div>
             <div class="row" id="menuimg">
-                <div class="col-xl-6 col-md-6 col-lg-6" >
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/burger.jpg' %}" alt="burger-img">
-                            
-                        </div>
-                        <div class="info">
-                            <h3>Beefy Burgers</h3>
-                            <span>$5</span>
-                            <p>Best American Beefy burger. You surely need to try it once.</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/vaejo.jpg' %}" alt="vaejo-food">
-                            
-                        </div>
-                        <div class="info">
-                            <h3>Vaejo</h3>
-                            <span>$5</span>
-                            <p>Great spanish food to taste</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/festaitaliana.jpg' %}" alt="festaitaliana-food">
-                            
-                        </div>
-                        <div class="info">
-                            <h3>Festaitaliana</h3>
-                            <span>$9</span>
-                            <p>Great Italian Food</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-6 col-lg-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/noddlemeatball.jpg' %}" alt="noddlemeatball italian cusine ">
-                            
-                        </div>
-                        <div class="info">
-                            <h3>Meatball- noodle</h3>
-                            <span>$5</span>
-                            <p>Super tasty food of italian culture.</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/chatpat.jpg' %}" alt="chatpatey- iamge">
-                        </div>
-                        <div class="info">
-                            <h3>Chatpat</h3>
-                            <span>$2</span>
-                            <p>Inovation from indian people. But Nepalese modify its taste. You once try it out!</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                            
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/panipuri.jpg' %}" alt="panipuri">
-                        </div>
-                        <div class="info">
-                          <h3>Pani-puri</h3>
-                            <span>$2</span>
-                            <p>Inovation from indian people. But Nepalese modify its taste. You once try it out!</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/calamari.jpg' %}" alt="calamari">
-                        </div>
-                        <div class="info">
-                            <h3>Smokin Burger</h3>
-                            <span>$10</span>
-                            <p>Spanish traditional Dish</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/chickenbiryani.jpg' %}" alt="chickenbiryani food">
-                        </div>
-                        <div class="info">
-                            <h3>Chicken Biryani</h3>
-                            <span>$20</span>
-                            <p>Indian Food</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-
-
-                <div class="col-xl-6 col-md-6 col-lg-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/fish.jpg' %}" alt="Fish-curry">
-                        </div>
-                        <div class="info">
-                            <h3>Fish Curry</h3>
-                            <span>$5</span>
-                            <p>Fantastic American Cusine </p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/CocktailSomasa.jpg' %}" alt="Samosa">
-                        </div>
-                        <div class="info">
-                            <h3>Cocktail Samosa</h3>
-                            <span>$4</span>
-                            <p>Great Nepali Indian food.</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/hotedogg.jpg' %}" alt="hotdogg">
-                        </div>
-                        <div class="info">
-                            <h3>Hot-Dogg</h3>
-                            <span>$6</span>
-                            <p>Super Hottest dish</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/mentaiko.jpg' %}" alt="mentaiko food">
-                        </div>
-                        <div class="info">
-                            <h3>Mentaiko</h3>
-                            <span>$15</span>
-                            <p>Great Japanese food</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/mixcurry.jpg' %}" alt="Mixcurry">
-                        </div>
-                        <div class="info">
-                            <h3>Mixcurry</h3>
-                            <span>$12</span>
-                            <p>Indian food</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/momoz.jpg' %}" alt="MO:MO">
-                        </div>
-                        <div class="info">
-                            <h3>MO:MO</h3>
-                            <span>$10</span>
-                            <p>Nepali food</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/sushi.jpg' %}" alt="sushi japanese food ">
-                        </div>
-                        <div class="info">
-                            <h3>Sushi</h3>
-                            <span>$15</span>
-                            <p>Japanese food</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/yakitori.jpg' %}" alt="Yakitori">
-                        </div>
-                        <div class="info">
-                            <h3>Yakitori</h3>
-                            <span>$13</span>
-                            <p>Traditional Japanese food</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/onigiri.jpg' %}" alt="Onigiri">
-                        </div>
-                        <div class="info">
-                            <h3>Onigiri</h3>
-                            <span>$20</span>
-                            <p>Special food from Le hart</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="single_delicious d-flex align-items-center">
-                        <div class="thumb">
-                            <img src="{% static 'images/Okonomiyaki-Osaka.jpg' %}" alt="Okonomiyaki-Osaka">
-                        </div>
-                        <div class="info">
-                            <h3>Okonomiyaki-Osaka</h3>
-                            <span>$8</span>
-                            <p>Okonomiyaki-Osaka</p>
-                            <button type="submit" class="btn btn-outline-success">Place order</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                  <hr>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- best_burgers_area_end  -->
-
-    <!-- features_room_startt -->
-   <!--  <div class="Burger_President_area">
-            <div class="Burger_President_here">
-                <div class="single_Burger_President">
-                    <div class="room_thumb">
-                        <img src="img/burgers/1.png" alt="">
-                        <div class="room_heading d-flex justify-content-between align-items-center">
-                            <div class="room_heading_inner">
-                                <span>$20</span>
-                                <h3>The Burger President</h3>
-                                <p>Great way to make your business appear trust <br> and relevant.</p>
-                                <a href="#" class="boxed-btn3">Order Now</a>
+                {% for m in menu_d%}
+                <div class="col-xl-4 col-md-4 col-lg-4" >
+                   <div class="card" id= "card" style="width: 18rem;">
+                        <img src="http://127.0.0.1:8000/media/{{m.img}}" class="card-img-top" alt="{{m.name}}"
+                             style="height:100px;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{m.name}}</h5>
+                                <h5 class="card-title">{{m.price}}</h5>
+                                <p class="card-text">{{m.desc}}</p>
+                                <a href="/ordered/list/{{m.id}} " class="btn btn-primary">Add to Order list</a>
                             </div>
-                            
-                        </div>
-                    </div>
+                   </div>
                 </div>
-                <div class="single_Burger_President">
-                    <div class="room_thumb">
-                        <img src="img/burgers/2.png" alt="">
-                        <div class="room_heading d-flex justify-content-between align-items-center">
-                            <div class="room_heading_inner">
-                                <span>$20</span>
-                                <h3>The Burger President</h3>
-                                <p>Great way to make your business appear trust <br> and relevant.</p>
-                                <a href="#" class="boxed-btn3">Order Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                {% endfor %}
+
+
+
+
             </div>
     </div>
-    
- -->
-      
+
+    </div>
+
 
 
 
