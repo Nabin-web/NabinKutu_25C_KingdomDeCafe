@@ -43,6 +43,11 @@
                     </li>
 
                         <li class="nav-item active">
+                <a class="nav-link text-white font-italic" href="../ordered/orderlist">Your Order </a>
+            </li>
+
+
+                        <li class="nav-item active">
                       <a class="nav-link text-white font-italic" href="/review">Review</a>
                   </li>
 
@@ -77,15 +82,14 @@
 
             <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
 
-                    {% if logged != '' %}
-                    {{request.usr.Email}}
-                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
-
-                    {% else %}
+                    {% if user.is_authenticated %}
+                {{ request.user }}
+                     <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+                {% else %}
                     <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
-
+                        or
                     <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
-                    {% endif %}
+                {% endif %}
                 </div>
 
 
@@ -168,24 +172,33 @@
         </div>
 
     </div>
-
+<br>
 
      <div class = "container-fluid">
         <div class="row">
 
-            <div class="col-lg-8 col-sm-8 col-md-8">
-                {% for detail in urd %}
+        {% for detail in urd %}
+            <div class="col-lg-4 col-sm-4 col-md-4">
+
                 <div class="card border border-primary" style="width: 18rem;">
                     <div class="card-body">
                         <p class="card-text">{{detail.review_desc}}</p>
-                        <span>@{{detail.user.First_name}}</span><span>{{detail.user.Second_name}}</span>
+                        <span>@{{detail.user.username}}</span>
                         <p>{{detail.created_date}}</p>
+                        {% if request.user.id == detail.user.id %}
+                            <a href="../deletereview/{{detail.id}}" type="submit" class="btn btn-danger">Delete</a>
+                            <a href="/updatereview/{{detail.id}}" type="submit" class="btn btn-success">Edit</a>
+                            <a href="" type="submit" class="btn btn-outline-primary">Like</a>
+                        {% else %}
+                            <a href="" type="submit" class="btn btn-outline-primary">Like</a>
+                        {% endif %}
+
                     </div>
                 </div>
                 <br>
-                {% endfor %}
-            </div>
 
+            </div>
+      {% endfor %}
             <div class="col-lg-4 col-sm-4 col-md-4"></div>
         </div>
      </div>

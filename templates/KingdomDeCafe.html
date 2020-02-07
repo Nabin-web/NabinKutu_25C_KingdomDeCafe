@@ -74,25 +74,24 @@
 
 
 
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>
-                  </form>
+<!--                  <form class="form-inline my-2 my-lg-0">-->
+<!--                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                    <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>-->
+<!--                  </form>-->
                 </div>
               </nav>
 
             </div>
                 <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
 
-                    {% if logged != '' %}
-                    {{request.logged.Email}}
-                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
-
-                    {% else %}
+                    {% if user.is_authenticated %}
+                {{ request.user }}
+                     <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+                {% else %}
                     <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
-
+                        or
                     <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
-                    {% endif %}
+                {% endif %}
                 </div>
           </div>
         </div>
@@ -133,13 +132,16 @@
                     </div>
 
                     <div class="modal-body" id="Book">
-                      <div class="row" id="table"><form method="post">
-                          {% csrf_token %}
+                      <div class="row" id="table">
+
+
                         <div class="form-group">
                           <img src="{% static 'images/tables.jpg' %}">
                         </div>
                       </div>
                       <div class="row">
+                          <form method="post" action="">
+                          {% csrf_token %}
                         <div class="form-group">
                           <label>Customer-Full-Name</label>
                           <input type="text" name="customername" placeholder="Enter full name.." class="form-control " required>
@@ -174,10 +176,9 @@
 
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Book now!</button>
+                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Book now!</button>
                     </div>
-
                       </form>
                   </div>
                 </div>
@@ -241,14 +242,14 @@
 
 
 
-    <script>
-        function myFunction()
-        {
-        var img = document.getElementById('image');
-        img.setAttribute('style', 'transform: rotate(360deg)');
-        setTimeout("myFunction()",1000);
-        }
-    </script>
+<!--    <script>-->
+<!--        function myFunction()-->
+<!--        {-->
+<!--        var img = document.getElementById('image');-->
+<!--        img.setAttribute('style', 'transform: rotate(360deg)');-->
+<!--        setTimeout("myFunction()",1000);-->
+<!--        }-->
+<!--    </script>-->
 
 
 

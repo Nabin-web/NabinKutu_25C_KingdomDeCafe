@@ -1,4 +1,6 @@
 from datetime import date
+
+from django.conf import settings
 from django.db import models
 from django.utils.timezone import now
 # Create your models here.
@@ -10,7 +12,7 @@ class Book_table(models.Model):
     table_num = models.CharField(max_length=50)
     number_of_customer = models.IntegerField(default="0")
     Time = models.CharField(default="", max_length=50)
-    Date = models.DateField()
+    Date = models.DateField(default=now())
 
 
 class Registration_table(models.Model):
@@ -22,15 +24,23 @@ class Registration_table(models.Model):
     Date_of_birth = models.DateField()
     Remember_me = models.BooleanField()
 
+    def __str__(self):
+        return self.Email
+
 
 class User_review(models.Model):
-    user = models.ForeignKey(Registration_table, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=now, editable=False)
     review_desc = models.TextField(max_length=500)
 
 
-# def __str__(self):
-#     return self.name
+class user_detail(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=50)
+    dob = models.DateField()
+
+
+
 
 
 

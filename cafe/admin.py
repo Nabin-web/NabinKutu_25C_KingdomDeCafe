@@ -10,7 +10,7 @@ class Book_Table_Admin(admin.ModelAdmin):
 
 
 class Registration_table_admin(admin.ModelAdmin):
-    list_display = ('First_name', 'Second_name', 'Email', 'Password', 'Phone_number', 'Date_of_birth', 'Remember_me')
+    list_display = ('First_name', 'Second_name', 'Email', 'Password', 'Phone_number',  'Date_of_birth', 'Remember_me')
 
 
 class User_review_table(admin.ModelAdmin):

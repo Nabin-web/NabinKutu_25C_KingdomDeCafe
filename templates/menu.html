@@ -43,8 +43,14 @@
                     </li>
 
                         <li class="nav-item active">
+                <a class="nav-link text-white font-italic" href="../ordered/orderlist">Your Order </a>
+            </li>
+
+
+                        <li class="nav-item active">
                       <a class="nav-link text-white font-italic" href="/review">Review</a>
                   </li>
+
 
 
       
@@ -68,8 +74,9 @@
 
 
     
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <form method="post" class="form-inline my-2 my-lg-0">
+                      {% csrf_token %}
+                    <input class="form-control mr-sm-2" type="search" name="key"  placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>
                   </form>
                 </div>
@@ -78,15 +85,14 @@
             </div>
             <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
 
-                    {% if logged != '' %}
-                    {{request.usr.Email}}
-                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
-
-                    {% else %}
-                    <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
-
-                    <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
-                    {% endif %}
+                {% if user.is_authenticated %}
+                {{request.user}}
+                     <button href="/logout" class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button>
+                {% else %}
+                    <button href="/login" class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button>
+                        or
+                    <button href="/register" class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button>
+                {% endif %}
                 </div>
           
 
@@ -109,11 +115,11 @@
                 </div>
 
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="{% static 'images/burger.jpg' %}" alt="burger">
+                  <img class="d-block w-100" src="{% static 'images/newari.jpg' %}" alt="newariset">
                 </div>
 
                 <div class="carousel-item active">
-                <img class="d-block w-100" src="{% static 'images/newari.jpg' %}" alt="newariset">
+                <img class="d-block w-100" src="{% static 'images/burger.jpg' %}" alt="burger">
                 </div>
                 
               <div class="carousel-item">
@@ -151,7 +157,7 @@
                 </div>
             </div>
             <div class="row" id="menuimg">
-                {% for m in menu_d%}
+                {% for m in showmenu%}
                 <div class="col-xl-4 col-md-4 col-lg-4" >
                    <div class="card" id= "card" style="width: 18rem;">
                         <img src="http://127.0.0.1:8000/media/{{m.img}}" class="card-img-top" alt="{{m.name}}"
@@ -160,7 +166,7 @@
                                 <h5 class="card-title">{{m.name}}</h5>
                                 <h5 class="card-title">{{m.price}}</h5>
                                 <p class="card-text">{{m.desc}}</p>
-                                <a href="/ordered/list/{{m.id}} " class="btn btn-primary">Add to Order list</a>
+                                <a href="/ordered/list/{{m.id}} " class="btn btn-primary" type="submit">Add to Order list</a>
                             </div>
                    </div>
                 </div>

@@ -43,6 +43,11 @@
                     </li>
 
                         <li class="nav-item active">
+                <a class="nav-link text-white font-italic" href="/ordered/orderlist">Your Order </a>
+            </li>
+
+
+                        <li class="nav-item active">
                       <a class="nav-link text-white font-italic" href="/review">Review</a>
                   </li>
 
@@ -77,24 +82,54 @@
 
             <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
 
-                    {% if logged != '' %}
-                    {{request.usr.Email}}
-                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
-
-                    {% else %}
+                     {% if user.is_authenticated %}
+                {{ request.user }}
+                     <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+                {% else %}
                     <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
-
+                        or
                     <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
-                    {% endif %}
+                {% endif %}
             </div>
 
 
 
             <div class="container-fluid">
-                <div class="row">
-                    <img src="..." class="rounded float-left" alt="...">
 
+                <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-md-4"><p class="text-white">Your Orders:</p></div>
+
+                    <div class="col-lg-4 col-sm-4 col-md-4">
+                        <table class="table table-sm table-dark">
+                            <thead>
+
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for food in order_list %}
+                            {%if food.user_name.id == current_user%}
+                            <tr>
+                                <th scope="row">{{food.food_name.id}}</th>
+                                <td>{{food.food_name.name}}</td>
+                                <td>{{food.food_name.price}}</td>
+                                <td>{{food.user_name.username}}</td>
+                                <td><a href="/ordered/cancel/{{food.id}}" type="submit" class="btn btn-danger">Cancel</a></td>
+                            </tr>
+
+                            {%endif%}
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-4 col-md-4"></div>
                 </div>
+
 
             </div>
 

@@ -43,6 +43,9 @@
                             <a class="nav-link text-white font-italic" href="/menu">Menu</a>
                     </li>
 
+
+
+
                         <li class="nav-item active">
                       <a class="nav-link text-white font-italic" href="/review">Review</a>
                   </li>
@@ -63,10 +66,10 @@
                     
                   </ul>
     
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>
-                  </form>
+<!--                  <form class="form-inline my-2 my-lg-0">-->
+<!--                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                    <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>-->
+<!--                  </form>-->
                 </div>
               </nav>
                   
@@ -74,15 +77,14 @@
 
             <div class="col-lg-2 col-sm-2 col-md-2" id="loginsign">
 
-                    {% if logged != '' %}
-                    {{request.usr.Email}}
-                        <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
-
-                    {% else %}
+                     {% if user.is_authenticated %}
+                {{ request.user }}
+                     <a href="/logout"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">logout</button></a>
+                {% else %}
                     <a href="/login"> <button class="btn btn-outlineprimary my-2 my-sm-0" type="submit">Login</button></a>
-
+                        or
                     <a href="/register"><button class="btn btn-success my-2 my-sm-0" type="submit">SignUp</button></a>
-                    {% endif %}
+                {% endif %}
                 </div>
           
 
