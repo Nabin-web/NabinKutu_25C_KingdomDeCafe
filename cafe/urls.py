@@ -16,8 +16,9 @@ urlpatterns = [
     path('location/', views.showlocation, name='chef-Page'),
     path('review/', views.showReview, name='chef-Page'),
     path('logout/', views.logout, name='logout'),
-    path('updatereview/<int:pk>', views.update_review, name='update'),
+    path('update/<int:pk>', views.update_review, name='update'),
     path('deletereview/<int:pk>', views.delete_review, name='del'),
+
 
 
 

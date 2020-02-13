@@ -136,8 +136,15 @@ def delete_review(request, pk):
 
 
 def update_review(request, pk):
-    update = User_review.objects.get(id=pk)
-    return render(request, '/review')
+    review = User_review.objects.get(id=pk)
+    if request.method == 'POST':
+        updated = request.POST.get('review')
+        review.review_desc = updated
+        review.save()
+        return redirect('/review', {'urd': review})
+
+    return render(request, 'update.html', {'review': review})
+
 
 
 

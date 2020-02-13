@@ -44,9 +44,15 @@
                 <a class="nav-link" href="/food">FoodGallery</a>
               </li>
 
-              <li class="nav-item active">
-                <a class="nav-link text-white font-italic" href="/menu">Menu</a>
-            </li>
+              {% if user.is_authenticated %}
+                    <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="../menu">Menu</a>
+                    </li>
+                        {%else%}
+                        <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="../login">Menu</a>
+                    </li>
+                        {%endif%}
 
                   <li class="nav-item active">
                 <a class="nav-link text-white font-italic" href="../ordered/orderlist">Your Order </a>
@@ -168,7 +174,7 @@
 
  <div class="row">
     <div class="col-lg-1 col-md-1 col-sm-1"></div>
-    <div class="col-lg-10 col-md-1 col-sm-10 companyimg">
+    <div class="col-lg-10 col-md-10 col-sm-10 companyimg">
       <div id="local"><p>Local business Supporter</p></div>
       <div id="organization"> <p>Kingdom De cafe is being Supported by different organizations.</p></div>
       <img src="{% static 'images/fast.jpg' %}">

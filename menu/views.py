@@ -8,7 +8,7 @@ from datetime import datetime
 from .models import menu_table, ordered_item, order_list
 
 
-@login_required
+
 def showmenu(request):
 
     if request.method == "POST":
@@ -29,7 +29,7 @@ def showorderlist(request):
     # order = order_food
     # print(order.name)
     # return HttpResponse(order_food.name)
-    return render(request, "ordered_list.html", {'order_list': ordered_food, 'current_user':current_user})
+    return render(request, "ordered_list.html", {'order_list': ordered_food, 'current_user': current_user})
 
 
 def add_order(request, pk):
@@ -38,7 +38,7 @@ def add_order(request, pk):
     date = datetime.now()
     listt = order_list(user_name=user, food_name=food_id, date=date)
     listt.save()
-    return HttpResponse('<script>alert("Added to ordered list")</script>')
+    return redirect('/menu')
 
 
 def forcancel(request, pk):

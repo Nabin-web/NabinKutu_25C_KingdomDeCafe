@@ -37,9 +37,15 @@
                       <a class="nav-link text-white font-italic" href="/food">FoodGallery</a>
                     </li>
 
+                    {% if user.is_authenticated %}
                     <li class="nav-item active">
                       <a class="nav-link text-white font-italic" href="../menu">Menu</a>
-                  </li>
+                    </li>
+                        {%else%}
+                        <li class="nav-item active">
+                      <a class="nav-link text-white font-italic" href="../login">Menu</a>
+                    </li>
+                        {%endif%}
 
                         <li class="nav-item active">
                 <a class="nav-link text-white font-italic" href="../ordered/orderlist">Your Order </a>
